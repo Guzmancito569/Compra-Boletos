@@ -91,11 +91,11 @@ var usuar=document.getElementById("usuar").value;
 var password=document.getElementById("password").value;
 if (usuar=="Admin" && password=="1234@") {
     alert("Ingreso Exitoso");
-    window.location="/resources/views/home/home2.html";
+    window.location="/resources/views/home/home.html";
     return false;
 } if (usuar=="Cliente" && password=="123acceso") {
     alert("Ingreso Exitoso");
-    window.location="resources/views/home/home2.html";
+    window.location="resources/views/home/home.html";
     return false;
 } 
 else{

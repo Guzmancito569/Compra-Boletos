@@ -1,32 +1,105 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>CINEMAS Nicaragua - Compra de Boletos</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/resources/public/css/home/home.css">
-  </head>
-  <body>
-    <h1>CINEMAS Nicaragua - Compra de Boletos</h1>
+    <title>CINEMAS</title>
+</head>
+<body>
+    <header>
+        <!--NavBar-->
+        <div class="ms-auto col-12">
+          <nav class="navbar navbar-expand-lg navbar-light navbar-style">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                <img src="/resources/public/img/logo.png"/>
+              </a>
     
-    <form>
-      <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" name="nombre" required><br><br>
-      
-      <label for="correo">Correo electrónico:</label>
-      <input type="email" id="correo" name="correo" required><br><br>
-      
-      <label for="pelicula">Película:</label>
-      <select id="pelicula" name="pelicula" required>
-        <option value="">--Seleccione una película--</option>
-        <option value="avengers">Avengers: Endgame</option>
-        <option value="starwars">Star Wars: El ascenso de Skywalker</option>
-        <option value="joker">Joker</option>
-      </select><br><br>
-      
-      <label for="cantidad">Cantidad de boletos:</label>
-      <input type="number" id="cantidad" name="cantidad" min="1" max="10" required><br><br>
-      
-      <input type="submit" value="Comprar boletos">
-    </form>
-    <script src="/resources/public/js/home/home.js"></script>
-  </body>
+                <!-- Este div tiene justify-content-end para alinear los links a la derecha. -->
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                  <ul class="navbar-nav">
+                      <li class="nav-item">
+                          <a class="nav-link active" aria-current="page"
+                              href="/resources/views/home/home.html">Inicio</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link active" aria-current="page"
+                              href="#">Contacto</a>
+                      </li>
+                  </ul>
+                </div>
+
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <!-- Titulo -->
+      <div class="ms-auto col-12  animated bounceInUp">
+        <!-- Agregar a la clase showcase en caso que no se extienda mas-->
+          <h1 class="title">
+            Compra de boletos Cinemas Nicaragua
+          </h1>
+
+          <!-- Captura de los valores del cliente -->
+          <div class="contenedor-captura-datos">
+            <div>
+              <select id="selected-fecha" data-placeholder="Seleccione Fecha">
+                <option>Seleccione Fecha</option>
+                <option value="0">Jueves 11, Mayo</option>
+              </select>
+            </div>
+            <div>
+              <select id="selected-cinemas" data-placeholder="Seleccione Cinemas">
+                <option>Seleccione Cinemas</option>
+                <option value="0">Galerias</option>
+                <option value="0">Plaza Inter</option>
+                <option value="0">Bello horizonte</option>
+                <option value="0">Masaya</option>
+              </select>
+            </div>
+            <div>
+              <select id="selected-pelicula" data-placeholder="Seleccione Pelicula">
+                <option>Seleccione Pelicula</option>
+                <option value="0">Guardianes de la Galaxia Vol 3.</option>
+                <option value="0">Evil Dead Rise: El Despertar</option>
+                <option value="0">Super Mario Bros: La pelicula</option>
+              </select>
+            </div>
+            <div>
+              <select id="selected-formato" data-placeholder="Seleccione Formato">
+                <option>Seleccione Formato</option>
+                <option value="0">2D Subtitulada</option>
+              </select>
+            </div>
+            <div>
+              <select id="selected-horario" data-placeholder="Seleccione Horario">
+                <option>Seleccione Horario</option>
+                <option value="0">06:15 PM</option>
+                <option value="0">08:15 PM</option>
+              </select>
+            </div>
+            <div>
+              <input type="button" value="Comprar Entrada" onclick="example()">
+              <script>
+                function example() {
+                  window.location = "/resources/views/listado/listado.html"
+                }
+              </script>
+            </div>
+          </div>
+      </div>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="container-fluid text-center">
+          <p class="final text-white text-center">
+            © 2022 CINEMAS all rights reserved.
+          </p>
+        </div>
+      </footer>
+</body>
 </html>
