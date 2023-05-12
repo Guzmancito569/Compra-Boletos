@@ -30,7 +30,13 @@
                         <input id="usuar" type="email" placeholder="example@gmail.com">
                         <input id="password" type="password" placeholder="Contraseña">
                         <h6 id="forgot">Olvidaste tu Contraseña?</h6>
-                        <input type="button" value="Log In" id="submit" onclick="validate()">
+                        <input type="button" value="Continuar Como Invitado" onclick="guess()">
+                        <input type="button" value="Iniciar sesión" id="submit" onclick="validate()">
+                        <script>
+                            function guess() {
+                                window.location = "/resources/views/home/home.html";
+                            }
+                        </script>
                     </form>
 
                     <!--Register-->

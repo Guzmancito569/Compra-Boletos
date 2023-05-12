@@ -64,16 +64,21 @@ body {
     position: relative;
 }
 
-.listado {
+.listado, .subtitle {
     text-align: center;
     display: grid;
     margin: auto;
 }
 
+.importantia {
+    text-align: center;
+    color: gray;
+}
+
 .contenedor-captura-datos {
     padding-top: 15px;
     height: 50px;
-    background-color: #00f;
+    /* background-color: #00f; */
     padding-left: 10vh;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -92,7 +97,7 @@ body {
     width: 100%;
 }
 
-@media (min-width: 395px) {
+@media (min-width: 350px) {
     
     .navbar-expand-lg .navbar-nav {
         flex-direction:row
@@ -104,7 +109,7 @@ body {
     }
     
     .navbar-expand-lg .navbar-collapse{
-        display: flex!important;
+        display: flex !important;
         flex-basis: auto
     }
 }
